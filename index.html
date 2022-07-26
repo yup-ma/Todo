@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO - A simple elegant todo app</title>
+    <link rel="stylesheet" href="CSS/Base.css">
+    <link rel="stylesheet" href="CSS/Index.css">
+    <link rel="stylesheet" href="CSS/Navbar.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/26b04b0eef.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <navbar-component></navbar-component>
+    <main>
+        <div class="main-container">
+            <div class="main-container-top-section txt-center">
+                <span><i class="fa-solid fa-list"></i></span>
+                <h1>ToDo</h1>
+                <p>A simple elegant app to keep track of your todo list</p>
+            </div>
+            <div id="form">
+                <form>
+                    <div class="todo-container d-flex d-flex-just-cent">
+                        <div class="todo-input-container d-flex">
+                            <button type="button" class="emoji-dropdown-btn d-flex d-flex-just-cent"><i
+                                    class="fa fa-smile-o" aria-hidden="true"></i></button>
+                            <div class="emoji-dropdown">
+                                <button type="button">🙏</button>
+                                <button type="button">👋</button>
+                                <button type="button">🤝</button>
+                                <button type="button">🙌</button>
+                                <button type="button">👍</button>
+                                <button type="button">🍩</button>
+                                <button type="button">😍</button>
+                                <button type="button">🤯</button>
+                                <button type="button">🤓</button>
+                                <button type="button">⚡</button>
+                                <button type="button">💪</button>
+                                <button type="button">❤️</button>
+                                <button type="button">✨</button>
+                                <button type="button">🤩</button>
+                                <button type="button">🤣</button>
+                                <button type="button">😜</button>
+                                <button type="button">😤</button>
+                                <button type="button">😎</button>
+                                <button type="button">🤠</button>
+                                <button type="button">🤗</button>
+                                <button type="button">😱</button>
+                                <button type="button">😡</button>
+                                <button type="button">🚀</button>
+                                <button type="button">🦄</button>
+                                <button type="button">🌈</button>
+                            </div>
+                            <input class="todo-input" type="text" placeholder="Enter a task">
+                            <button class="todo-add-btn" type="button">Add</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <ul class="todo-list d-flex d-flex-just-cent d-flex-dir-col">
+                <li>All caught up, no task to finish</li>
+            </ul>
+        </div>
+    </main>
+    <footer-component></footer-component>
+    <script src="JS/Dom/Navbar.js"></script>
+    <script src="JS/Dom/Footer.js"></script>
+    <script src="JS/Base.js"></script>
+</body>
+
+</html>

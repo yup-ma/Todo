@@ -1,0 +1,222 @@
+
+.main-container-top-section{
+    margin: 60px 0 80px;
+}
+.main-container-top-section span{
+    display: block;
+    color: var(--secondary-color);
+    font-size: 36px;
+}
+.main-container-top-section h1{
+    font-size: 81px;
+}
+.main-container-top-section p{
+    color: var(--primary-color);
+    font-size: 24px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.todo-container {
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0.8rem;
+    /* width: 100%; */
+}
+.todo-input-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+.todo-input {
+    width: 100%;
+    padding: 14px 10px 14px 50px;
+    font-size: 16px;
+    border-radius: 50px;
+    background-color: var(--cta-mostlight-color);
+    color: var(--primary-color);
+    border: 2px solid var(--cta-color);
+    outline: 2px solid transparent;
+    transition: var(--transition05);
+}
+.todo-input:focus {
+    outline: 2px solid var(--cta-color);
+    background-color: var(--white-color);
+}
+.todo-add-btn {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 13px;
+    font-size: 17px;
+    background-color: var(--cta-color);
+    color: var(--secondary-color);
+    transition: 0.5s;
+    font-weight: 500;
+    outline: 2px solid transparent;
+    border: none;
+    border-radius: 50px;
+    transition: var(--transition05);
+}
+.todo-add-btn:hover,.todo-add-btn:focus{
+    background-color: var(--cta-hover-color);
+    color: var(--primary-color);
+}
+.todo-add-btn:focus{
+    outline: 2px solid var(--cta-outline-color);
+}
+.todo-add-btn:active{
+    transform: scale(0.95) translateY(-50%);
+}
+.emoji-dropdown-btn {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: none;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 8px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--cta-hover-color);
+    transition: var(--transition05);
+}
+.emoji-dropdown-btn:hover,.emoji-dropdown-btn:focus {
+    background-color: var(--cta-light-color);
+    color: var(--secondary-color);
+}
+.emoji-dropdown-btn:active{
+    transform: scale(0.95) translateY(-50%);
+}
+.emoji-dropdown-btn.active {
+    background-color: var(--cta-hover-color);
+    color: var(--primary-color);
+}
+.emoji-dropdown {
+    display: none;
+    position: absolute;
+    bottom: 58px;
+    left: -14px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--cta-mostlight-color);
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    color: var(--white-color);
+    z-index: 1;
+    flex-wrap: wrap;
+    max-width: 250px;
+    animation: transAnime var(--transition02) linear;
+    transform-origin: bottom;
+}
+@keyframes transAnime {
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.emoji-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -23px;
+    left: 28.5px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    vertical-align: middle;
+    border-top-color: var(--cta-mostlight-color);
+    pointer-events: none;
+}
+
+.emoji-dropdown button {
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    min-width: 38px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    margin: 3px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.emoji-dropdown button:hover,.emoji-dropdown button:focus {
+    background-color: var(--cta-color);
+}
+.emoji-dropdown button:active {
+    transform: scale(0.9);
+}
+
+.todo-list{
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    color: var(--secondary-slight-light-color);
+    max-width: 700px;
+    min-width: 25%;
+    margin: auto;
+}
+
+.added-task {
+    font-size: 20px;
+    margin: 1rem auto;
+    background-color: var(--cta-light-color);
+    color: var(--secondary-color);
+    font-size: 19px;
+    padding: 6px 8px;
+    border-radius: 30px;
+    transition: var(--transition05);
+}
+.added-task.fall {
+    animation: taskDeletedAnime var(--transition02) linear;
+}
+@keyframes taskDeletedAnime {
+    100%{
+        transform: translateY(100px) rotateZ(45deg);
+        opacity: 0;
+    }
+}
+.added-task .added-task-text{
+    word-break: break-word;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.added-task.completed-task {
+    opacity: 0.5;
+    filter: brightness(0.8);
+}
+.added-task.completed-task .added-task-text{
+    text-decoration: line-through;
+}
+.added-task .check-btn, .added-task .delete-btn {
+    font-size: 19px;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 80%;
+    margin: 0 5px;
+    border: none;
+    flex-shrink: 0;
+    background-color: var(--cta-hover-color);
+    color: var(--secondary-color);
+    transition: var(--transition05);
+}
+.added-task .check-btn:hover, .added-task .delete-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
