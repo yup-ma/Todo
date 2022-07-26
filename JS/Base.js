@@ -47,6 +47,7 @@ function openEmojiDropDownFunc(){
     } else {
         emojiDropdown.style.display = "flex";
         this.classList.add("active")
+        emojiDropdown.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
         setTimeout(() => {
             document.body.addEventListener('click', closeEmojiDropdownFunc)
         }, 300);
