@@ -148,6 +148,9 @@ function deleteTaskFunc() {
         actionStatus = "success";
         actionMessage = "Task has been removed successfully";
         showActionMessageFunc();
+        if (!toDoList.querySelector(".added-task")) {
+            toDoList.innerHTML = `<li>All caught up, no task to finish</li>`;
+        }
     })
 }
 function completeTaskFunc() {
