@@ -1,6 +1,6 @@
 
 .main-container-top-section{
-    margin: 60px 0 80px;
+    margin: 60px 0 0;
 }
 .main-container-top-section span{
     display: block;
@@ -24,7 +24,7 @@
     justify-content: center;
     margin: 15px 0;
     padding: 0.8rem;
-    /* width: 100%; */
+    padding-top: 80px;
 }
 .todo-input-container {
     position: relative;
@@ -33,7 +33,7 @@
 }
 .todo-input {
     width: 100%;
-    padding: 14px 10px 14px 50px;
+    padding: 14px 72px 14px 50px;
     font-size: 16px;
     border-radius: 50px;
     background-color: var(--cta-mostlight-color);

@@ -10,12 +10,12 @@ navbarTemplate.innerHTML = `<div class="navbar-top"></div>
             <span class="company-name">ToDO</span>
         </a>
         <div class="d-flex">
-            <a href="/Hacker-News#search-input-parent-container" class="web-links d-flex d-flex-just-cent"
+            <a href="#todo-container" class="web-links d-flex d-flex-just-cent"
                 title="Add a task" data-nav-title="Add a task"">
                 <span class="link-icon link-search-icon"><i class="fa-solid fa-square-plus"></i></span>
                 <span class="link-text">Add task</span>
             </a>
-            <a href="/Hacker-News#search-input-parent-container" class="web-links d-flex d-flex-just-cent"
+            <a href="#todo-list" class="web-links d-flex d-flex-just-cent"
                 title="Task lists" data-nav-title="Task lists"">
                 <span class="link-icon link-search-icon"><i class="fa-solid fa-list-check"></i></span>
                 <span class="link-text">Task list</span>
